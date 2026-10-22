@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RSA Challenge — self-check</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>RSA Challenge</h1>
+  <p>Factoring / decryption challenges in the spirit of the
+  <a href="https://en.wikipedia.org/wiki/RSA_Factoring_Challenge">RSA Factoring Challenge</a>.
+  Each challenge publishes a modulus <code>N</code>, <code>e = 65537</code> and a ciphertext <code>c</code>
+  (textbook RSA, no padding, of a UTF-8 message read as a big-endian integer).
+  Solve it by submitting the factors <code>p, q</code>, the private exponent <code>d</code>, or the plaintext.</p>
+  <p class="note"><strong>Self-check only:</strong> verification runs entirely in your browser against SHA-256
+  commitments — nothing is sent anywhere and there is no leaderboard.</p>
+</header>
+<main>
+  <section>
+    <h2>Challenges</h2>
+    <table id="list"><thead><tr><th>ID</th><th>Bits</th><th>Digits</th><th>Created</th><th></th></tr></thead><tbody></tbody></table>
+    <p id="loaderr" class="fail" hidden></p>
+  </section>
+  <section id="detail" hidden>
+    <h2 id="d-title"></h2>
+    <dl>
+      <dt>N</dt><dd><code id="d-n" class="num"></code></dd>
+      <dt>e</dt><dd><code id="d-e"></code></dd>
+      <dt>c</dt><dd><code id="d-c" class="num"></code></dd>
+      <dt>SHA-256("p,q")</dt><dd><code id="d-fh"></code></dd>
+      <dt>SHA-256(plaintext)</dt><dd><code id="d-ph"></code></dd>
+    </dl>
+    <form id="f-factors"><h3>Submit factors</h3>
+      <label>p <input name="p" autocomplete="off"></label>
+      <label>q <input name="q" autocomplete="off"></label>
+      <button>Check factors</button></form>
+    <form id="f-d"><h3>Submit private exponent d</h3>
+      <label>d <input name="d" autocomplete="off"></label><button>Check d</button></form>
+    <form id="f-pt"><h3>Submit plaintext</h3>
+      <label>plaintext <input name="pt" autocomplete="off"></label><button>Check plaintext</button></form>
+    <p id="result" aria-live="polite"></p>
+  </section>
+</main>
+<footer><a href="https://github.com/bamr87/rsa-challenge">source</a> · <a href="challenges.json">challenges.json</a></footer>
+<script src="verify.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+body{font-family:system-ui,sans-serif;max-width:60rem;margin:2rem auto;padding:0 1rem;line-height:1.45;color:#222}
+code.num{word-break:break-all;font-size:.85em}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #ddd;padding:.3rem .5rem;text-align:left}
+form{margin:1rem 0;padding:.75rem;border:1px solid #ddd;border-radius:6px}
+label{display:block;margin:.3rem 0}input{width:100%;font-family:monospace}
+.ok{color:#0a6b2d;font-weight:bold}.fail{color:#a40000;font-weight:bold}.note{background:#fff7d6;padding:.5rem;border-radius:4px}
+dd{margin:0 0 .5rem 0}

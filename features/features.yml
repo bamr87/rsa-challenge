@@ -1,0 +1,65 @@
+# features/features.yml — what rsa-challenge does today. Schema: features/v1 (+ governance kit status/prd).
+schema: features/v1
+repo: bamr87/rsa-challenge
+prd: PRD.md
+
+features:
+  - id: RSA-001
+    title: "Generate challenges by bits or digits"
+    description: "`rsa-challenge generate --bits N` / `--digits D` / `--default-set` creates RSA moduli with e=65537 using Miller-Rabin primes from the secrets CSPRNG."
+    implemented: true
+    status: shipped
+    prd: [FR1, NFR2]
+    surface: cli
+    link: rsa_challenge/cli.py
+    docs: README.md
+    tests: [tests/test_rsa_challenge.py]
+  - id: RSA-002
+    title: "Public challenge file with commitments"
+    description: "challenges/challenges.json holds only id, bits, digits, N, e, textbook-RSA ciphertext c and SHA-256 commitments of the factors and plaintext."
+    implemented: true
+    status: shipped
+    prd: [FR2]
+    surface: data
+    link: challenges/challenges.json
+    docs: README.md
+    tests: [tests/test_rsa_challenge.py]
+  - id: RSA-003
+    title: "Secrets kept out of git"
+    description: "Private p, q, d and plaintext go to gitignored secrets/; scripts/check_no_secrets.py fails tests, CI and Pages deploy if any leak into tracked files."
+    implemented: true
+    status: shipped
+    prd: [FR3, NFR1]
+    surface: infra
+    link: scripts/check_no_secrets.py
+    docs: README.md
+    tests: [tests/test_rsa_challenge.py]
+  - id: RSA-004
+    title: "Verify submissions from the CLI"
+    description: "`rsa-challenge verify ID --p --q | --d | --plaintext` checks a solution against the public commitments."
+    implemented: true
+    status: shipped
+    prd: [FR4]
+    surface: cli
+    link: rsa_challenge/challenge.py
+    docs: README.md
+    tests: [tests/test_rsa_challenge.py]
+  - id: RSA-005
+    title: "Client-side verification site"
+    description: "Static GitHub Pages site lists challenges and verifies factors, d or plaintext in the browser with BigInt and Web Crypto; labelled self-check only."
+    implemented: true
+    status: shipped
+    prd: [FR5, NFR3, NFR4]
+    surface: ui
+    link: site/index.html
+    docs: README.md
+    tests: [scripts/js_selftest.mjs]
+  - id: RSA-006
+    title: "Seeded challenge ladder"
+    description: "Committed challenges from 32 to 2048 bits, including an RSA-100 equivalent (330 bits, 100 digits)."
+    implemented: true
+    status: shipped
+    prd: [FR6]
+    surface: data
+    link: challenges/challenges.json
+    docs: README.md
