@@ -5,6 +5,22 @@
 Give puzzle-solvers and people learning RSA a set of factoring / decryption challenges at graded sizes,
 modelled on the RSA Factoring Challenge, plus a zero-install way to check a solution.
 
+## 1.1 Missions
+
+RSA Challenge's direction is to become the ultimate open home for all things RSA factoring practice — data, tools, resources and transparency, gathered in one place that anyone can inspect and reuse.
+
+1. **Provide data, tools, resources and transparency for all stakeholders, cryptography students and practitioners, and the general public.** Puzzle-solvers, teachers and anyone learning how RSA actually yields are first-class audiences. The aim is a shared, inspectable commons: the same graded challenges, the same verifier, and the same public commitments for everyone.
+2. **Publish graded RSA factoring and decryption challenges, modelled on the RSA Factoring Challenge, so anyone can learn and practice at a size they can actually finish.** The ladder should run from trivially solvable to infeasible, generated with a clear, standard-library method and a public record of N, e, ciphertext and commitments.
+3. **Let solvers self-check in the open with a zero-install, client-side verifier and a CLI, while private factors and plaintexts never leave a gitignored secrets directory and never appear in public challenge data.** Verification is a self-check, not a leaderboard, and secret material must never be committed, printed in a PR, or shipped with the site.
+
+These missions set the course; they do not claim the work is finished. They serve the PRD requirements: generate challenges, publish only public material, keep secrets out of git, verify from the CLI and the browser, and ship a seeded ladder.
+
+**Requirement**
+
+- MR1: Constitution §1 states one direction statement and exactly three numbered missions, and the README and AGENTS.md taglines match that direction and link to constitution §1.
+
+Feature [RSA-007](features/features.yml) traces to requirement MR1.
+
 ## 2. Users
 
 - Solvers who want to test factoring tools (Pollard rho, ECM, QS, NFS) against known-hard sizes.
@@ -45,6 +61,7 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | [RSA-004](features/features.yml) | Verify submissions from the CLI | shipped | [`rsa_challenge/challenge.py`](rsa_challenge/challenge.py) · [`README.md`](README.md) | FR4 |
 | [RSA-005](features/features.yml) | Client-side verification site | shipped | [`site/index.html`](site/index.html) · [`README.md`](README.md) | FR5, NFR3, NFR4 |
 | [RSA-006](features/features.yml) | Seeded challenge ladder | shipped | [`challenges/challenges.json`](challenges/challenges.json) · [`README.md`](README.md) | FR6 |
+| [RSA-007](features/features.yml) | Constitution missions | planned | [`docs/constitution.md`](docs/constitution.md) · [`PRD.md`](PRD.md) | MR1 |
 
 **Requirement → feature trace**
 
@@ -60,4 +77,5 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | NFR3 | RSA-005 |
 | NFR4 | RSA-005 |
 | FR6 | RSA-006 |
+| MR1 | RSA-007 |
 <!-- features:end -->
