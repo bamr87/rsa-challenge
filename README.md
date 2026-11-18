@@ -1,5 +1,7 @@
 # rsa-challenge
 
+> RSA Challenge's direction is to become the ultimate open home for all things RSA factoring practice: data, tools, resources and transparency, with graded challenges and a zero-install, client-side self-check that never exposes private factors, for everyone ([constitution](docs/constitution.md) §1).
+
 Generate RSA factoring / decryption challenges at any size and self-check solutions in the browser —
 a small homage to the [RSA Factoring Challenge](https://en.wikipedia.org/wiki/RSA_Factoring_Challenge)
 (RSA-100 style ids name decimal digits; `RSA-<bits>b` ids name bit length, like RSA-576).

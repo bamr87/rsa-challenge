@@ -1,5 +1,7 @@
 # AGENTS.md — rsa-challenge
 
+> RSA Challenge's direction is to become the ultimate open home for all things RSA factoring practice: data, tools, resources and transparency, with graded challenges and a zero-install, client-side self-check that never exposes private factors, for everyone ([constitution](docs/constitution.md) §1).
+
 Read [docs/constitution.md](docs/constitution.md) first; it outranks this file.
 
 ## Layout
