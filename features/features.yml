@@ -67,8 +67,27 @@ features:
     title: "Constitution missions"
     description: "One direction statement and exactly three numbered missions in constitution §1, with matching README and AGENTS.md taglines linked to that section."
     implemented: true
-    status: planned
+    status: shipped
     prd: [MR1]
     surface: docs
     link: "docs/constitution.md"
     docs: "PRD.md"
+  - id: RSA-008
+    title: "Export public parameters in common solver formats"
+    description: "CLI and site export of a published challenge's public fields (N, e, c, commitments) as JSON, hex, Sage, or Python, without reading secrets/."
+    implemented: false
+    status: planned
+    prd: [FR7]
+    surface: cli
+    link: rsa_challenge/cli.py
+    docs: README.md
+  - id: RSA-009
+    title: "Practice resources for factoring methods and references"
+    description: "A static site page and README section covering what is published, the textbook-RSA warning, a size-to-method ladder, and public references."
+    implemented: false
+    status: planned
+    prd: [FR8]
+    surface: ui
+    link: site/index.html
+    docs: README.md
+
