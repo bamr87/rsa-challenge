@@ -72,3 +72,22 @@ features:
     surface: docs
     link: "docs/constitution.md"
     docs: "PRD.md"
+  - id: RSA-008
+    title: "Export public parameters in common solver formats"
+    description: "CLI and site export of a published challenge's public fields (N, e, c, commitments) as JSON, hex, Sage, or Python, without reading secrets/."
+    implemented: false
+    status: planned
+    prd: [FR7]
+    surface: cli
+    link: rsa_challenge/cli.py
+    docs: README.md
+  - id: RSA-009
+    title: "Practice resources for factoring methods and references"
+    description: "A static site page and README section covering what is published, the textbook-RSA warning, a size-to-method ladder, and public references."
+    implemented: false
+    status: planned
+    prd: [FR8]
+    surface: ui
+    link: site/index.html
+    docs: README.md
+

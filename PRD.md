@@ -36,6 +36,8 @@ Feature [RSA-007](features/features.yml) traces to requirement MR1.
 - FR4: A `verify` CLI checks a submission of factors, private exponent d, or plaintext.
 - FR5: A static web page lists published challenges and verifies submissions client-side (factors, d, or plaintext) with clear success/failure.
 - FR6: The repo ships a seeded set of challenges from trivially solvable to infeasible sizes.
+- FR7: Solvers can export a published challenge's public parameters (N, e, c, commitments) in common tool formats, from the CLI and the site, without exposing secret material.
+- FR8: The site and README point solvers to short practice resources: what is published, that encryption is textbook RSA, which sizes are for which methods, and public references.
 
 **Non-functional**
 
@@ -62,6 +64,8 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | [RSA-005](features/features.yml) | Client-side verification site | shipped | [`site/index.html`](site/index.html) · [`README.md`](README.md) | FR5, NFR3, NFR4 |
 | [RSA-006](features/features.yml) | Seeded challenge ladder | shipped | [`challenges/challenges.json`](challenges/challenges.json) · [`README.md`](README.md) | FR6 |
 | [RSA-007](features/features.yml) | Constitution missions | shipped | [`docs/constitution.md`](docs/constitution.md) · [`PRD.md`](PRD.md) | MR1 |
+| [RSA-008](features/features.yml) | Export public parameters in common solver formats | planned | [`rsa_challenge/cli.py`](rsa_challenge/cli.py) · [`README.md`](README.md) | FR7 |
+| [RSA-009](features/features.yml) | Practice resources for factoring methods and references | planned | [`site/index.html`](site/index.html) · [`README.md`](README.md) | FR8 |
 
 **Requirement → feature trace**
 
@@ -78,4 +82,6 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | NFR4 | RSA-005 |
 | FR6 | RSA-006 |
 | MR1 | RSA-007 |
+| FR7 | RSA-008 |
+| FR8 | RSA-009 |
 <!-- features:end -->
