@@ -61,7 +61,7 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | [RSA-004](features/features.yml) | Verify submissions from the CLI | shipped | [`rsa_challenge/challenge.py`](rsa_challenge/challenge.py) · [`README.md`](README.md) | FR4 |
 | [RSA-005](features/features.yml) | Client-side verification site | shipped | [`site/index.html`](site/index.html) · [`README.md`](README.md) | FR5, NFR3, NFR4 |
 | [RSA-006](features/features.yml) | Seeded challenge ladder | shipped | [`challenges/challenges.json`](challenges/challenges.json) · [`README.md`](README.md) | FR6 |
-| [RSA-007](features/features.yml) | Constitution missions | planned | [`docs/constitution.md`](docs/constitution.md) · [`PRD.md`](PRD.md) | MR1 |
+| [RSA-007](features/features.yml) | Constitution missions | shipped | [`docs/constitution.md`](docs/constitution.md) · [`PRD.md`](PRD.md) | MR1 |
 
 **Requirement → feature trace**
 

@@ -1,10 +1,10 @@
 <!-- kit: governance v0.1.0 -->
 # 0002 — Missions
 
-- **Status:** proposed
+- **Status:** ratified
 - **Date:** 2026-11-16
 - **Proposed by:** Grok Bot (agent), at the maintainer's request
-- **Ratified by:**
+- **Ratified by:** [PR #2](https://github.com/bamr87/rsa-challenge/pull/2)
 - **Affects:** constitution §1; PRD §1.1; feature RSA-007
 - **Supersedes:** none
 - **Related:** [PRD.md](../../PRD.md) §1.1; feature RSA-007
@@ -30,4 +30,4 @@ _Source: [PRD.md](../PRD.md) §1.1._
 
 ## Consequences
 
-Agents and reviewers judge fit against these three missions before inventing scope, treating them as the direction of the repo rather than a description of what already ships. The same text is added as PRD §1.1 so the constitution's `_Source:` line stays accurate. The original PRD purpose / overview paragraph is left in place. This PR also aligns the README and AGENTS.md taglines with the missions and links them to constitution §1, and adds feature RSA-007 to the feature catalog, traced to requirement MR1. Merging this PR ratifies amendment 0002. Until then the record stays `Status: proposed`.
+Agents and reviewers judge fit against these three missions before inventing scope, treating them as the direction of the repo rather than a description of what already ships. The same text is added as PRD §1.1 so the constitution's `_Source:` line stays accurate. The original PRD purpose / overview paragraph is left in place. This PR also aligns the README and AGENTS.md taglines with the missions and links them to constitution §1, and adds feature RSA-007 to the feature catalog, traced to requirement MR1. PR #2 merged on 2026-11-18 and thereby ratified amendment 0002. This follow-up records `Status: ratified` and `Ratified by:` that PR; the missions text is unchanged.
